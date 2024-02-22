@@ -54,7 +54,7 @@ for line in lines:
             x = x.removeprefix("0b")
             x = x.removeprefix("1b")
         else:
-            x.
+            x.lower()
             if x in opcodes:
                 x = opcodes.get(x)
             else:
