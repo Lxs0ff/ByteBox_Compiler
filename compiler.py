@@ -6,29 +6,33 @@ opcodes = {
     "store":"00010",
     "add":"00011",
     "subtract":"00100",
-    "load":"00101",
-    "load":"00110",
-    "load":"00111",
-    "load":"01000",
-    "load":"01001",
-    "load":"01011",
-    "load":"01100",
-    "load":"01101",
-    "load":"01111",
-    "load":"10000",
-    "load":"10001",
-    "load":"10011",
-    "load":"10100",
-    "load":"10101",
-    "load":"10110",
-    "load":"10111",
-    "load":"11000",
-    "load":"11001",
-    "load":"10001",
-    "load":"10001",
-    "load":"10001",
-    "load":"10001",
-    "halt":"11111"
+    "increment":"00101",
+    "decrement":"00110",
+    "or":"00111",
+    "and":"01000",
+    "xor":"01001",
+    "invert":"01010",
+    "shiftup":"01011",
+    "shiftdown":"01100",
+    "video":"01101",
+    "out":"01110",
+    "in":"01111",
+    "jump":"10000",
+    "jumpif":"10001",
+    "passth":"10010",
+    "halt":"10011",
+    "ldi":"10100",
+    "sdi":"10101",
+    "nor":"10110",
+    "nand":"10111",
+    "xnor":"11000",
+    #"":"11001",
+    "resetreg":"11010",
+    #"":"11011",
+    #"":"11100",
+    #"":"11101",
+    #"":"11110",
+    #"":"11111"
 }
 
 line_count = 0
@@ -50,7 +54,7 @@ for line in lines:
             x = x.removeprefix("0b")
             x = x.removeprefix("1b")
         else:
-            x.capitalize
+            x.
             if x in opcodes:
                 x = opcodes.get(x)
             else:
