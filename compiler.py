@@ -75,7 +75,6 @@ for line in lines:
                     x = opcodes.get(x)
                 else:
                     error()
-                    
             newline += x
         out_file.write(newline + '\n')
         print(newline)
