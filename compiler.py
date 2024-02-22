@@ -51,6 +51,7 @@ def error():
     in_file.close
     out_file.close
     os.remove('output.txt')
+    time.sleep(10)
     exit()
 
 start_time = time.time
@@ -87,3 +88,4 @@ total_time = end_time - start_time
 in_file.close
 out_file.close
 print("Compiling Sucessfull in " + total_time + "seconds")
+time.sleep(10)
