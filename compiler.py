@@ -56,28 +56,31 @@ def error():
 start_time = time.time
 for line in lines:
     line_count += 1
-    newline = ""
-    words = line.split(' ')
-    for x in words:
-        if x.isnumeric:
-            if x < 256:
-                x = bin(x)
-                if int(x) > 0:
-                    x = x.removeprefix("0b")
-                else:
-                    x = x.removeprefix("1b")
-            else: 
-                error()
-        else:
-            x.lower()
-            if x in opcodes:
-                x = opcodes.get(x)
+    if line_count < 32:
+        newline = ""
+        words = line.split(' ')
+        for x in words:
+            if x.isnumeric:
+                if x < 256:
+                    x = bin(x)
+                    if int(x) > 0:
+                        x = x.removeprefix("0b")
+                    else:
+                        x = x.removeprefix("1b")
+                else: 
+                    error()
             else:
-                error()
-                
-        newline += x
-    out_file.write(newline + '\n')
-    print(newline)
+                x.lower()
+                if x in opcodes:
+                    x = opcodes.get(x)
+                else:
+                    error()
+                    
+            newline += x
+        out_file.write(newline + '\n')
+        print(newline)
+    else:
+        break
 
 end_time = time.time
 total_time = end_time - start_time
