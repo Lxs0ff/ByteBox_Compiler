@@ -2,7 +2,33 @@ import os
 import time
 
 opcodes = {
-    "halt":""
+    "load":"00001",
+    "store":"00010",
+    "add":"00011",
+    "subtract":"00100",
+    "load":"00101",
+    "load":"00110",
+    "load":"00111",
+    "load":"01000",
+    "load":"01001",
+    "load":"01011",
+    "load":"01100",
+    "load":"01101",
+    "load":"01111",
+    "load":"10000",
+    "load":"10001",
+    "load":"10011",
+    "load":"10100",
+    "load":"10101",
+    "load":"10110",
+    "load":"10111",
+    "load":"11000",
+    "load":"11001",
+    "load":"10001",
+    "load":"10001",
+    "load":"10001",
+    "load":"10001",
+    "halt":"11111"
 }
 
 line_count = 0
