@@ -1,5 +1,10 @@
 
-in_file = open()
+in_file = open('input.txt', r)
+lines = in_file.readlines()
+out_file = open('output.txt', //FIND WHAT)
 
-line = ""
+for line in lines:
+    words = line.split(' ')
+    for word in words:
+        if //logic for if number or not
 
