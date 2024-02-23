@@ -90,6 +90,7 @@ for line in lines:
 
 in_file.close
 out_file.close
+line_count = str(line_count)
 print("Compiling Sucessfull with " + line_count + "lines")
 schem_question = input("Do you want to convert to a schematic(y/n): ")
 if schem_question == "y" or schem_question == "Y":
