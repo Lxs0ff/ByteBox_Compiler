@@ -40,5 +40,5 @@ for line in lines:
                 schem.setBlock( (x,y,z) , "minecraft:air")
 
 now = datetime.now()
-current_time = now.strftime("%H:%M:%S")
+current_time = now.strftime("%H:%M")
 schem.save(  "code_schems", current_time + "_code", mcschematic.Version.JE_1_19_4)
