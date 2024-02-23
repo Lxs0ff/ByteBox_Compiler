@@ -37,6 +37,8 @@ opcodes = {
 }
 
 total_time = 0
+end_time = 0
+start_time = 0
 line_count = 0
 
 in_file = open('input.txt', "r")
