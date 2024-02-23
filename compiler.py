@@ -75,8 +75,9 @@ for line in lines:
                     else:
                         x = x.removeprefix("1b")
                 else: 
-                    print("isnumeric error")
-                    error()
+                    if x != " ":
+                        print("isnumeric error")
+                        error()
             else:
                 x.lower()
                 if x in opcodes:
