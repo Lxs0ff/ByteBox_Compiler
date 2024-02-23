@@ -52,6 +52,7 @@ except:
 out_file = open('output.txt', "a")
 
 def error():
+    line_count = str(line_count)
     print("There was an error in the code at line: " + line_count)
     in_file.close
     out_file.close
