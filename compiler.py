@@ -52,8 +52,8 @@ except:
 out_file = open('output.txt', "a")
 
 def error():
-    line_count = str(line_count)
-    print("There was an error in the code at line: " + line_count)
+    line_count_str = str(line_count)
+    print("There was an error in the code at line: " + line_coun_str)
     in_file.close
     out_file.close
     os.remove('output.txt')
@@ -90,8 +90,8 @@ for line in lines:
 
 in_file.close
 out_file.close
-line_count = str(line_count)
-print("Compiling Sucessfull with " + line_count + "lines")
+line_count_str = str(line_count)
+print("Compiling Sucessfull with " + line_count_str + "lines")
 schem_question = input("Do you want to convert to a schematic(y/n): ")
 if schem_question == "y" or schem_question == "Y":
     subprocess.run(["python", "out_to_mcschem.py"])
