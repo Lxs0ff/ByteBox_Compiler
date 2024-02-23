@@ -37,6 +37,8 @@ opcodes = {
 }
 
 line_count = 0
+x_str = ""
+
 try:
     in_file = open('input.txt', "r")
     lines = in_file.readlines()
@@ -85,7 +87,8 @@ for line in lines:
                 except:
                     print("opcode error")
                     error()
-            newline += x
+            x_str = str(x)
+            newline += x_str
         out_file.write(newline + '\n')
         print(newline)
     else:
