@@ -72,10 +72,6 @@ for line in lines:
                 x = int(x)
                 if x < 256:
                     x = bin(x)
-                    if int(x) > 0:
-                        x = x.removeprefix("0b")
-                    else:
-                        x = x.removeprefix("1b")
                     print(x)
                 else: 
                     if x != " ":
