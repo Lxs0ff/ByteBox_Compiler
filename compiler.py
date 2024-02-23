@@ -74,7 +74,7 @@ for line in lines:
                     x = bin(x)
                     try:
                         x.removeprefix("0b")
-                    except
+                    except:
                         x.removeprefix("1b")
                 else: 
                     if x != " ":
