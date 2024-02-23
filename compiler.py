@@ -76,6 +76,7 @@ for line in lines:
                         x = x.removeprefix("0b")
                     else:
                         x = x.removeprefix("1b")
+                    print(x)
                 else: 
                     if x != " ":
                         print("isnumeric error")
