@@ -37,11 +37,18 @@ opcodes = {
 }
 
 line_count = 0
+try:
+    in_file = open('input.txt', "r")
+    lines = in_file.readlines()
+except:
+    print("error with input.txt file exiting in 10 seconds...")
+    time.sleep(10)
+    exit()
 
-in_file = open('input.txt', "r")
-lines = in_file.readlines()
-
-os.remove('output.txt')
+try:
+    os.remove('output.txt')
+except:
+    print("output.txt file not found creating file")
 out_file = open('output.txt', "a")
 
 def error():
