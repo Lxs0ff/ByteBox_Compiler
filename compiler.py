@@ -80,9 +80,9 @@ for line in lines:
                         error()
             else:
                 x.lower()
-                if x in opcodes:
+                try:
                     x = opcodes.get(x)
-                else:
+                except:
                     print("opcode error")
                     error()
             newline += x

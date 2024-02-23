@@ -1,2 +1,2 @@
-halt 7 250
+halt 
 in 4 67
