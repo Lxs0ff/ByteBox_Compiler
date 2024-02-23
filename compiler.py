@@ -68,7 +68,7 @@ for line in lines:
         newline = ""
         words = line.split(' ')
         for x in words:
-            if x.isdigit:
+            if x.capitalize == x.lower:
                 x = int(x)
                 if x < 256:
                     x = bin(x)
