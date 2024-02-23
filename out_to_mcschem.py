@@ -25,8 +25,6 @@ for line in lines:
             z =
         else:
             += 4
-            
-            
     if line_count > 32:
         break
     for bit in line:
