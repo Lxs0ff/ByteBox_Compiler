@@ -68,11 +68,10 @@ for line in lines:
         newline = ""
         words = line.split(' ')
         for x in words:
-            if x.isnumeric:
+            if x.isdigit:
                 x = int(x)
                 if x < 256:
                     x = bin(x)
-                    print(x)
                 else: 
                     if x != " ":
                         print("isnumeric error")
