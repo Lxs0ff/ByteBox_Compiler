@@ -1,4 +1,5 @@
 import os
+import subprocess
 import time
 
 opcodes = {
@@ -88,4 +89,8 @@ total_time = end_time - start_time
 in_file.close
 out_file.close
 print("Compiling Sucessfull in " + total_time + "seconds")
+schem_question = input("Do you want to convert to a schematic(y/n): ")
+if schem_question == "y" or schem_question == "Y":
+    subprocess.run(["python", "out_to_mcschem.py"])
+print("Exiting in 10 seconds...")
 time.sleep(10)

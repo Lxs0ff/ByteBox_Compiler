@@ -10,7 +10,6 @@ except:
 x = 0
 y = 0
 z = 0
-
 schem = mcschematic.MCSchematic()
 
 bin_file = open('output.txt', "r")
