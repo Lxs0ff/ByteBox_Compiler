@@ -36,9 +36,6 @@ opcodes = {
     #"":"11111"
 }
 
-total_time = 0
-end_time = 0
-start_time = 0
 line_count = 0
 
 in_file = open('input.txt', "r")
@@ -48,18 +45,13 @@ os.remove('output.txt')
 out_file = open('output.txt', "a")
 
 def error():
-    end_time = time.time
-    total_time = end_time - start_time
     print("There was an error in the code at line: " + line_count)
-    print("After " + total_time + " seconds")
     in_file.close
     out_file.close
     os.remove('output.txt')
     time.sleep(10)
     exit()
     return
-
-start_time = time.time
 for line in lines:
     line_count += 1
     if line_count < 32:
@@ -88,12 +80,9 @@ for line in lines:
     else:
         break
 
-end_time = time.time
-total_time = end_time - start_time
-
 in_file.close
 out_file.close
-print("Compiling Sucessfull in " + total_time + "seconds")
+print("Compiling Sucessfull with " + line_count + "lines")
 schem_question = input("Do you want to convert to a schematic(y/n): ")
 if schem_question == "y" or schem_question == "Y":
     subprocess.run(["python", "out_to_mcschem.py"])
