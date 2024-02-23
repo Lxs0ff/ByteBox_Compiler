@@ -36,6 +36,7 @@ opcodes = {
     #"":"11111"
 }
 
+total_time = 0
 line_count = 0
 
 in_file = open('input.txt', "r")
@@ -54,6 +55,7 @@ def error():
     os.remove('output.txt')
     time.sleep(10)
     exit()
+    return
 
 start_time = time.time
 for line in lines:
@@ -62,7 +64,8 @@ for line in lines:
         newline = ""
         words = line.split(' ')
         for x in words:
-            if x.isnumeric:
+            if not x.isnumeric:
+                x = int(x)
                 if x < 256:
                     x = bin(x)
                     if int(x) > 0:
