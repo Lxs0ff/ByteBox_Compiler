@@ -37,9 +37,9 @@ for line in lines:
             schem.place()
         else:
             if bit = 1:
-                schem.place()
+                schem.setBlock( (x,y,z) , "minecraft:redstone_block")
             else:
-                schem.place()
+                schem.setBlock( (x,y,z) , "minecraft:air")
 
 now = datetime.now()
 current_time = now.strftime("%H:%M:%S")
