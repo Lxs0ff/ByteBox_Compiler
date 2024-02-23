@@ -72,6 +72,10 @@ for line in lines:
                 x = int(x)
                 if x < 256:
                     x = bin(x)
+                    try:
+                        x.removeprefix("0b")
+                    except
+                        x.removeprefix("1b")
                 else: 
                     if x != " ":
                         print("isnumeric error")
