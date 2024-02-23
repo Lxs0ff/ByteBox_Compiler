@@ -98,7 +98,7 @@ for line in lines:
 in_file.close
 out_file.close
 line_count_str = str(line_count)
-print("Compiling Sucessfull with " + line_count_str + "lines")
+print("Compiling Sucessfull (" + line_count_str + " lines)")
 schem_question = input("Do you want to convert to a schematic(y/n): ")
 if schem_question == "y" or schem_question == "Y":
     subprocess.run(["python", "out_to_mcschem.py"])
