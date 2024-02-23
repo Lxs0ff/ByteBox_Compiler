@@ -75,12 +75,14 @@ for line in lines:
                     else:
                         x = x.removeprefix("1b")
                 else: 
+                    print("isnumeric error")
                     error()
             else:
                 x.lower()
                 if x in opcodes:
                     x = opcodes.get(x)
                 else:
+                    print("opcode error")
                     error()
             newline += x
         out_file.write(newline + '\n')
