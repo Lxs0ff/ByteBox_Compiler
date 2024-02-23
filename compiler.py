@@ -53,7 +53,7 @@ out_file = open('output.txt', "a")
 
 def error():
     line_count_str = str(line_count)
-    print("There was an error in the code at line: " + line_coun_str)
+    print("There was an error in the code at line: " + line_count_str)
     in_file.close
     out_file.close
     os.remove('output.txt')
