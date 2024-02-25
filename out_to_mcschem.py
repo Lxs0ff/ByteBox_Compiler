@@ -6,6 +6,7 @@ try:
 except:
     print("McShem library not found, importing library...")
     subprocess.run(["pip", "install", "mcschematic"]) 
+    import mcschematic
 
 x = 0
 y = 0
