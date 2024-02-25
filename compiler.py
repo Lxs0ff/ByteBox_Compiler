@@ -68,14 +68,12 @@ for line in lines:
         newline = ""
         words = line.split(' ')
         for x in words:
+            print(x)
             if x.capitalize == x.lower:
                 x = int(x)
                 if x < 256:
+                    x.bit_length = 8
                     x = bin(x)
-                    try:
-                        x.removeprefix("0b")
-                    except:
-                        x.removeprefix("1b")
                 else: 
                     if x != " ":
                         print("isnumeric error")
