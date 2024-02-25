@@ -86,6 +86,7 @@ for line in lines:
                     print("opcode error")
                     error()
             x_str = str(x)
+            newline = newline + x_str
         if newline != None:
             newline = newline.replace("None", "")
             out_file.write(newline + '\n')
