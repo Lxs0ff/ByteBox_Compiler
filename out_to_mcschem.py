@@ -2,10 +2,10 @@ import subprocess
 from datetime import datetime
 
 try:
-    import mcschematic
+    import mcshematic
 except:
     print("McShem library not found, importing library...")
-    subprocess.run(["pip", "install", "mcschematic"]) 
+    subprocess.run(["python","-m","pip", "install", "mcschematic"]) 
     import mcschematic
 
 x = 0
