@@ -69,11 +69,11 @@ for line in lines:
         words = line.split(' ')
         for x in words:
             print(x)
-            if x.capitalize == x.lower:
+            if x.isnumeric() == True:
                 x = int(x)
                 if x < 256:
-                    x.bit_length = 8
-                    x = bin(x)
+                    print(str(x))
+                    x = format(x, '08b')
                 else: 
                     if x != " ":
                         print("isnumeric error")
@@ -86,9 +86,10 @@ for line in lines:
                     print("opcode error")
                     error()
             x_str = str(x)
-            newline += x_str
-        out_file.write(newline + '\n')
-        print(newline)
+        if newline != None:
+            newline = newline.replace("None", "")
+            out_file.write(newline + '\n')
+            print(newline)
     else:
         break
 
@@ -99,5 +100,5 @@ print("Compiling Sucessfull (" + line_count_str + " lines)")
 schem_question = input("Do you want to convert to a schematic(y/n): ")
 if schem_question == "y" or schem_question == "Y":
     subprocess.run(["python", "out_to_mcschem.py"])
-print("Exiting in 10 seconds...")
-time.sleep(10)
+print("Exiting in 2 seconds...")
+time.sleep(2)
