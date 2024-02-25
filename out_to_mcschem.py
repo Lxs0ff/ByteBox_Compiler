@@ -5,7 +5,7 @@ try:
     import mcshematic
 except:
     print("McShem library not found, importing library...")
-    subprocess.run(["python","-m","pip", "install", "mcschematic"]) 
+    subprocess.run(["python3","-m","pip", "install", "mcschematic"]) 
     import mcschematic
 
 x = 0
