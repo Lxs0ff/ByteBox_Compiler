@@ -41,5 +41,5 @@ for line in bin_lines:
                 schem.setBlock( (x,y,z) , "minecraft:air")
 
 now = datetime.now()
-current_time = now.strftime("%H:%M")
-schem.save(  "code_schems", current_time + "_code", mcschematic.Version.JE_1_19_4)
+current_time = now.strftime("%H_%M")
+schem.save(  "schematics", current_time + "_code", mcschematic.Version.JE_1_19_4)
