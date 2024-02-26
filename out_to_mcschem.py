@@ -33,7 +33,7 @@ for line in bin_lines:
         if line_count == 1:
             y = -1
         if bit == 0:
-            schem.place()
+            schem.setBlock((x,y,z), "minecraft:redstone_block")
         else:
             if bit == 1:
                 schem.setBlock( (x,y,z) , "minecraft:redstone_block")
