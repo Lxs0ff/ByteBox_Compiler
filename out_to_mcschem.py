@@ -31,7 +31,7 @@ for line in bin_lines:
             x += 4
         if line_count == 1:
             y = -1
-    if line_count > 32:
+    if line_count == 33:
         print("readched max line count")
         break
     for bit in line:
