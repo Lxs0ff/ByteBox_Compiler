@@ -64,7 +64,7 @@ def error():
     return
 for line in lines:
     line_count += 1
-    if line_count < 32:
+    if line_count < 33:
         newline = ""
         words = line.split(' ')
         for x in words:
